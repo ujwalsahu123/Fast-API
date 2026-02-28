@@ -1,0 +1,5 @@
+campusx course and notes in docs 
+
+Fast API Documentataion full ek bar read. (no other course)
+
+project (with host)
