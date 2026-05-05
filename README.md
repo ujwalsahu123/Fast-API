@@ -1120,6 +1120,81 @@ So that it calls the main function & in the main function it will run the same c
 ---
 ---
 
+
+## 🌐 External API Usage in Python (Summary)
+
+### 📦 Libraries  
+
+- `requests` → sync (simple scripts)
+- `httpx` → async (best for FastAPI / high performance)
+
+---
+
+### 🔹 Basic Methods
+
+- GET → `requests.get(url)`
+- POST → `requests.post(url, json=data)`
+- PUT → `requests.put(url, json=data)`
+- DELETE → `requests.delete(url)`
+
+---
+
+### 🔹 Important Concepts
+
+#### 1) Response Handling
+
+```
+response.status_code
+response.json()
+```
+
+#### 2) Query Parameters
+
+```
+requests.get(url, params={"key": "value"})
+```
+
+#### 3) Headers (Auth / API Key)
+
+```
+headers = {"Authorization": "Bearer TOKEN"}
+requests.get(url, headers=headers)
+```
+
+#### 4) Request Body (POST / PUT)
+
+```
+requests.post(url, json={"key": "value"})
+```
+
+#### 5) Error Handling
+
+```
+if response.status_code != 200:
+    print("Error")
+```
+
+#### 6) Timeout
+
+```
+requests.get(url, timeout=5)
+```
+
+---
+
+### ⚡ Async Version (httpx)
+
+```
+async with httpx.AsyncClient() as client:
+    response = await client.get(url)
+```
+
+
+
+
+---
+---
+
 ## Read World Example :-
 
 ```
